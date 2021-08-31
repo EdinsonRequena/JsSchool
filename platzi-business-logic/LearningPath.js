@@ -17,14 +17,14 @@ class LearningPath {
         }
         res != false
             ? courses.push(newCourse) && console.log(`The course ${newCourse} was adedd`)
-            : console.log('al ready exists')
+            : console.log(`The course ${newCourse} already exists`)
         return courses
     }
     updateCourseName(oldName, newName) {
         let courses = this.courses
         let res
         if(courses.indexOf(newName) != -1) {
-            console.log(`The ${newName} course al ready exists`)
+            console.log(`The ${newName} course already exists`)
             return courses
         } else {
             for(let course of courses) {
