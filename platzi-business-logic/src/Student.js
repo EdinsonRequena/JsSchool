@@ -1,3 +1,5 @@
+import Course from "./Course";
+import { Python, BasicPrograming, StartupCourse } from './index.js'
 class Student {
     constructor({
         name,
@@ -81,3 +83,5 @@ class Student {
         }
     }
 }
+
+export default Student

@@ -1,3 +1,5 @@
+import Course from "./Course";
+import { Python, BasicPrograming, StartupCourse } from './index.js'
 import Student from "./Student";
 
 class FreeStudent extends Student {

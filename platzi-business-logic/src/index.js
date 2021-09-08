@@ -64,3 +64,5 @@ const Andrea = new BasicStudent({
     email: 'andrea@email.com',
     learningPath: [javascriptSchool, dataScience],
 });
+
+export default { StartupCourse, BasicPrograming, Python }
