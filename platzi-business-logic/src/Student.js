@@ -1,4 +1,3 @@
-
 class Student {
     constructor({
         name,
@@ -7,11 +6,14 @@ class Student {
         email,
         userName = 'defaultUserName',
         learningPath = [],
+        inProgressCourse = [],
         donedCourse = [],
         facebook = undefined,
         twitter = undefined,
-        instagram = undefined})
+        instagram = undefined
+        })
         {
+        this.inProgressCourse = inProgressCourse
         this.userName = userName;
         this.name = name;
         this.socialMedia = {
@@ -26,11 +28,26 @@ class Student {
         this.donedCourse = donedCourse;
     }
 
+    takeCourse(course) {
+        if(this.inProgressCourse.indexOf(course) === -1) { // if the course is not in the array
+            this.inProgressCourse.push(course)
+            console.log(`The ${course} course was taken`)
+            return this.inProgressCourse
+        } else {
+            console.log(`The ${course} course was already taken`)
+            return this.inProgressCourse
+        }
+    }
+
     finishCourse(newCourse) {
         let donedCourse = this.donedCourse
 
-        if(donedCourse.indexOf(newCourse) != -1) {
-            console.log(`The ${newCourse} course already exists`)
+        if(this.inProgressCourse.indexOf(newCourse) === -1) {
+            console.log(`The ${newCourse} course was not taken. You don't finish a course that not have been start`)
+            return this.inProgressCourse
+        } else {
+        if(donedCourse.indexOf(newCourse) != -1) { // if the course exists
+            console.log(`The ${newCourse} course already finished`)
             return donedCourse
         } else {
             donedCourse.push(newCourse)
@@ -38,6 +55,7 @@ class Student {
             return donedCourse
         }
     }
+}
     editUsername(newUsername) {
         if(newUsername === this.userName) {
             console.log('The new user name is the same')
@@ -63,5 +81,3 @@ class Student {
         }
     }
 }
-
-export default Student
