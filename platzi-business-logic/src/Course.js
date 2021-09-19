@@ -1,4 +1,3 @@
-
 class Course {
     constructor({
         name,
@@ -9,10 +8,14 @@ class Course {
             module4: []
         },
         clases = [],
+        isFree = false,
+        isStartupCourse = false
     }) {
         this.name = name
         this.clases = clases
         this.modules = modules
+        this.isFree = isFree
+        this.isStartupCourse = isStartupCourse
     }
 }
 
