@@ -38,15 +38,13 @@ const StartupCourse = new Course({
     }
 })
 
-
-
-const dataScience = new Carrer({
+const dataScience = new LearningPath({
     name: 'Data Science',
     courses: [ Python.name, BasicPrograming.name, 'R', 'Spark' ],
 })
 
 
-const javascriptSchool = new Carrer({
+const javascriptSchool = new LearningPath({
     name: 'Data Science',
     courses: [ BasicPrograming.name, 'ReactJs', 'React Native' ],
 })
